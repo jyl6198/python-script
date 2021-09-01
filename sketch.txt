@@ -1,0 +1,7 @@
+1) Obtain user's information from spotify 
+    a) have to fetch information from Spotify's open API
+2) Obtain user's last played tracks
+    a) probably somewhere in spotify's open API 
+3) use that information to get recommended tracks (similar in genre/artist/etc.?)
+4) Decide and create a spotify playlist 
+    a) populate said playlist with new tracks that are recommended 
