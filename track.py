@@ -5,8 +5,8 @@ class Track:
         self.name = name
         self.artist = artist
     
-    def create_playlist(self):
-        return -1
+    def create_spotify_uri(self):
+        return f"spotify:track:{self.id}"
     
     def __str__(self):
         return self.name + " by " + self.artist
