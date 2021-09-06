@@ -1,4 +1,4 @@
-# Create a playlist 
+# Create a Spotify Playlist
 
 ### Function
 ```
