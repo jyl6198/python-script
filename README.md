@@ -48,5 +48,7 @@ A playlist created and populated with recommended songs
 ```
 
 ### Sample playlist I created 
+![Console example](https://github.com/jyl6198/python-script/blob/main/images/console-example.png)
 
+![Spotify playlist example](https://github.com/jyl6198/python-script/blob/main/images/spotify-playlist.png)
 **Enjoy the generated playlist! :)**
