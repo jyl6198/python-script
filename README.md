@@ -47,4 +47,6 @@ A list of the songs you were recommended (currently set to 20 songs)
 A playlist created and populated with recommended songs
 ```
 
-**Enjoy the generated playlist! :) **
+### Sample playlist I created 
+
+**Enjoy the generated playlist! :)**
