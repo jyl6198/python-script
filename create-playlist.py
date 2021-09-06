@@ -13,12 +13,12 @@ def main():
         numTracks = int(input("Choose the number of songs played recently that you would like to display (up to 20): "))
     lastPlayedTracks = spotify.get_n_recent_tracks(numTracks)
 
-    print("There may be some repetition if you have played a certain song more than once.")
-    print("Please do not be alarmed and do not hesitate to choose the same song as a seed for the next prompt!")
+    print("\nThere may be some repetition if you have played a certain song more than once.")
+    print("Please do not be alarmed and do not hesitate to choose the same song as a seed for the next prompt!\n")
     for index, track in enumerate(lastPlayedTracks):
             print(f"{index+1}- {track}")
 
-    seedIndexes = input("Enter up to 5 tracks (by index number) that you would like to use as a seed to generate recommended songs: ")
+    seedIndexes = input("\nEnter up to 5 tracks (by index number and seperated by spaces) that you would like to use as a seed to generate recommended songs: ")
     while len(seedIndexes.split()) > 5:
         seedIndexes = input("Please list up to 5 indexes of the tracks you would like to use as a seed to generate recommended songs: ")
     seedIndexes = seedIndexes.split()
@@ -30,7 +30,7 @@ def main():
     for index, track in enumerate(reccTracks):
         print(f"{index+1}- {track}")
 
-    playlistName = input("Please enter a name for the playlist you will create: ")
+    playlistName = input("\nPlease enter a name for the playlist you will create: ")
     while playlistName is None or not playlistName:
         playlistName = input("Please enter a name for the playlist you will create: ")
     playlist = spotify.create_playlist(playlistName)
