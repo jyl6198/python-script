@@ -10,13 +10,15 @@ class SpotifyClient:
         self.__oauth_token = oauth_token
         self.__user_id = user_id
     
-    def get_current_user_recent_tracks(self, limit = 10):
+    # returns a list of songs/tracks (specified by user or default 20) that the current user recently played
+    def get_n_recent_tracks(self, limit = 20):
         url = f"https://api.spotify.com/v1/me/player/recently-played?limit={limit}"
-        response = self.get_api_requests(url)
+        response = self.get_api_request(url)
         response_json = response.json()
         tracks = [Track(track['track']['id'], track['track']['name'], track['track']['artists'][0]['name']) for track in response_json['items']]
         return tracks
     
+    # based on the seed object, returns a list that contains recommended songs
     def get_recommended_tracks(self, tracks, limit = 20):
         seed_tracks_url = ""
         for seedTrack in tracks:
@@ -28,6 +30,7 @@ class SpotifyClient:
         recc_tracks = [Track(track['id'], track['name'], track['artists'][0]['name']) for track in response_json['tracks']]
         return recc_tracks
 
+    # returns a playlist whose playlist name is provided by the user
     def create_playlist(self, playlistName):
         data = json.dumps({
                 "name": playlistName,
@@ -40,8 +43,9 @@ class SpotifyClient:
         playlistID = response_json['id']
         playlist = Playlist(playlistID, playlistName)
         return playlist
-        
-    def add_items_to_playlist(self, playlist, tracks): 
+
+    # populates the created playlist with the recommended songs/tracks   
+    def populate_playlist(self, playlist, tracks): 
         track_url_list = [track.create_spotify_uri() for track in tracks]
         data = json.dumps(track_url_list)
         url = f"https://api.spotify.com/v1/playlists/{playlist.id}/tracks"
