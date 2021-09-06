@@ -21,7 +21,8 @@ After clicking on "try in our web console," select "Get token" and check the fol
 <br>
 Then click on "generate token" and then "Try it"<br>
 You should see the following screen and you will want to save the information next to "id:"<br>
-Please refer to the following image to obtain the user's ID: 
+Please refer to the following image to obtain the user's ID:
+
 ![User ID SS](https://github.com/jyl6198/python-script/blob/main/images/userID.png)
 
 ### Get the current user's authorization token: 
@@ -33,6 +34,7 @@ After clicking on "try in our web console," select "Get token" and checkthe foll
 Then click on "generate token" but **DO NOT** click on "Try it." Otherwise, you will create an empty playlist<br>
 You will want to save the information underneath the "OAuth Token" 
 Please refer to the following image to obtain the user's Authorization Token:
+
 ![Authorization Token SS](https://github.com/jyl6198/python-script/blob/main/images/authToken.png)
 
 
