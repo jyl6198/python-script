@@ -13,22 +13,24 @@ Head on over to https://developer.spotify.com/documentation/web-api/reference/ a
   2) Create a Playlist
   You can open them by searching them up and clicking on "try in our web console" 
   
-## Get the current user's ID: 
+### Get the current user's ID: 
 After clicking on "try in our web console," select "Get token" and check the following boxes:
   * user-read-private
   * user-read-email
   * user-read-recently-played
-Then click on "generate token" and then "Try it" 
-You should see the following screen and you will want to save the information next to "id:" 
+<br>
+Then click on "generate token" and then "Try it"<br>
+You should see the following screen and you will want to save the information next to "id:"<br>
 Please refer to the following image to obtain the user's ID: 
 ![User ID SS](https://github.com/jyl6198/python-script/blob/main/images/userID.png)
 
-## Get the current user's authorization token: 
+### Get the current user's authorization token: 
 After clicking on "try in our web console," select "Get token" and checkthe following boxes: 
   * playlist-modify-public
   * playlist-modify-private
   * user-read-recently-played
-Then click on "generate token" but **DO NOT** click on "Try it." Otherwise, you will create an empty playlist
+<br>
+Then click on "generate token" but **DO NOT** click on "Try it." Otherwise, you will create an empty playlist<br>
 You will want to save the information underneath the "OAuth Token" 
 Please refer to the following image to obtain the user's Authorization Token:
 ![Authorization Token SS](https://github.com/jyl6198/python-script/blob/main/images/authToken.png)
